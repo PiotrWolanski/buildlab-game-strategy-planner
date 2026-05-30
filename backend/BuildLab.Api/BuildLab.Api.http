@@ -1,6 +1,42 @@
 @BuildLab.Api_HostAddress = http://localhost:5153
 
-GET {{BuildLab.Api_HostAddress}}/weatherforecast/
+### Get all build plans
+GET {{BuildLab.Api_HostAddress}}/api/buildplans
 Accept: application/json
 
-###
+### Get build plan by id
+GET {{BuildLab.Api_HostAddress}}/api/buildplans/1
+Accept: application/json
+
+### Create new build plan
+POST {{BuildLab.Api_HostAddress}}/api/buildplans
+Content-Type: application/json
+
+{
+  "name": "Albion ZvZ Engage Tank",
+  "game": "Albion Online",
+  "contentType": "ZvZ",
+  "role": "Engage Tank",
+  "scale": "50-100 players",
+  "status": "Draft",
+  "coreElements": "Grovekeeper, Judicator Armor, Knight Helmet, Hunter Shoes",
+  "notes": "Wait for the caller's command and engage only after enemy defensives are forced."
+}
+
+### Update build plan
+PUT {{BuildLab.Api_HostAddress}}/api/buildplans/1
+Content-Type: application/json
+
+{
+  "name": "Jinx ADC Crit Build",
+  "game": "League of Legends",
+  "contentType": "Ranked",
+  "role": "ADC",
+  "scale": "5v5",
+  "status": "Finished",
+  "coreElements": "Kraken Slayer, Infinity Edge, Runaan's Hurricane, Bloodthirster",
+  "notes": "Focus on safe laning, scaling and front-to-back teamfights. Consider blue trinket after level 9."
+}
+
+### Delete build plan
+DELETE {{BuildLab.Api_HostAddress}}/api/buildplans/3
