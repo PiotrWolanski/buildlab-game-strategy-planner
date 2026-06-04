@@ -1,0 +1,62 @@
+.build-list {
+  margin-top: 2rem;
+}
+
+.section-header {
+  margin-bottom: 1.5rem;
+}
+
+.section-header h2 {
+  margin-bottom: 0.25rem;
+}
+
+.section-header p {
+  color: #666;
+}
+
+.cards {
+  display: grid;
+  gap: 1rem;
+}
+
+.build-card {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 1rem;
+  background: #fff;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+}
+
+.card-header h3 {
+  margin: 0;
+}
+
+.status {
+  border-radius: 999px;
+  padding: 0.25rem 0.75rem;
+  background: #f1f1f1;
+  font-size: 0.875rem;
+}
+
+.meta {
+  color: #666;
+  margin: 0.5rem 0 1rem;
+}
+
+.card-section {
+  margin-top: 0.75rem;
+}
+
+.card-section p {
+  margin: 0.25rem 0 0;
+}
+
+.error-message {
+  color: #b00020;
+}

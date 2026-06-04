@@ -1,0 +1,19 @@
+.app-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+}
+
+.hero {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 1rem;
+}
+
+.hero h1 {
+  margin-bottom: 0.25rem;
+}
+
+.hero p {
+  color: #666;
+}

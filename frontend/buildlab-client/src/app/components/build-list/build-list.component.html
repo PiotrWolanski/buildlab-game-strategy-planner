@@ -1,0 +1,35 @@
+<section class="build-list">
+  <div class="section-header">
+    <h2>Saved build plans</h2>
+    <p>Builds, team setups and strategy notes loaded from the .NET API.</p>
+  </div>
+
+  <p *ngIf="isLoading">Loading build plans...</p>
+
+  <p class="error-message" *ngIf="errorMessage">
+    {{ errorMessage }}
+  </p>
+
+  <div class="cards" *ngIf="!isLoading && !errorMessage">
+    <article class="build-card" *ngFor="let build of buildPlans">
+      <div class="card-header">
+        <h3>{{ build.name }}</h3>
+        <span class="status">{{ build.status }}</span>
+      </div>
+
+      <p class="meta">
+        {{ build.game }} · {{ build.contentType }} · {{ build.role }} · {{ build.scale }}
+      </p>
+
+      <div class="card-section">
+        <strong>Core elements</strong>
+        <p>{{ build.coreElements }}</p>
+      </div>
+
+      <div class="card-section">
+        <strong>Notes</strong>
+        <p>{{ build.notes }}</p>
+      </div>
+    </article>
+  </div>
+</section>
