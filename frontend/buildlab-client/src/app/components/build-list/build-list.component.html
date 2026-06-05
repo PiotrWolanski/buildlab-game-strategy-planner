@@ -10,7 +10,11 @@
     {{ errorMessage }}
   </p>
 
-  <div class="cards" *ngIf="!isLoading && !errorMessage">
+  <p *ngIf="!isLoading && !errorMessage && buildPlans.length === 0">
+    No build plans found.
+  </p>
+
+  <div class="cards" *ngIf="!isLoading && !errorMessage && buildPlans.length > 0">
     <article class="build-card" *ngFor="let build of buildPlans">
       <div class="card-header">
         <h3>{{ build.name }}</h3>
